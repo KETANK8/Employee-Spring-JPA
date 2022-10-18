@@ -23,6 +23,6 @@ public interface employeeRepository extends JpaRepository<Employee, Integer> {
 
 	Iterable<Employee> findByEmpCity(String city);
 
-	@Query(value = "select * from Employee where empSalary > ?1", nativeQuery = true)
+	@Query(value = "select * from Employee where emp_Salary > ?1", nativeQuery = true)
 	Iterable<Employee> findByEmpSalary(int salary);
 }

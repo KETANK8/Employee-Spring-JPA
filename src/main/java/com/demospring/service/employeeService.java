@@ -101,9 +101,9 @@ public class employeeService {
 	// Method 9
 	// To fetch employee details from database using salary amount
 	// Fetch list of employee who having more salary than given amount
-	public List<Employee> getEmployeeBySalary(int salary) {
+	public List<Employee> getEmployeeBySalary(int amount) {
 		List<Employee> empList = new ArrayList<>();
-		empRepo.findByEmpSalary(salary).forEach(empList::add);
+		empRepo.findByEmpSalary(amount).forEach(empList::add);
 		return empList;
 	}
 
